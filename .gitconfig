@@ -1,0 +1,13 @@
+[alias]
+	# from https://legacy-developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/
+	## the acronym stands for "subtree add"
+	sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
+	## the acronym stands for "subtree update"
+	sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
+[user]
+	name = Justin Mancinelli
+	email = justin.mancinelli@gmail.com
